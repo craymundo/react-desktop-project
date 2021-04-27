@@ -1,0 +1,68 @@
+{
+  "name": "react-desktop-project",
+  "version": "1.0.0",
+  "private": true,
+  "main": "public/electron.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/node": "^14.14.41",
+    "@types/querystringify": "^2.0.0",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.9",
+    "crypto-js": "^4.0.0",
+    "electron": "^12.0.5",
+    "electron-builder": "^22.10.5",
+    "electron-is-dev": "^2.0.0",
+    "little-state-machine": "^4.1.0",
+    "little-state-machine-devtools": "^2.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "4.0.3",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-logger": "^3.0.6",
+    "redux-observable": "^1.2.0",
+    "rxjs": "^6.5.5",
+    "styled-components": "^5.2.3",
+    "typescript": "^3.8.3",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.0.1",
+    "@types/redux-actions": "^2.6.1",
+    "@types/redux-logger": "^3.0.8",
+    "concurrently": "^6.0.2",
+    "node-sass": "^4.13.1",
+    "wait-on": "^5.3.0"
+  },
+  "scripts": {
+    "start": "export PORT=3008 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3008 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
